@@ -1,6 +1,5 @@
 import { REST, Routes } from 'discord.js';
 import fs from 'fs';
-import config from './config.json' assert { type: 'json' }; // or use fs.readFileSync workaround
 
 
 
