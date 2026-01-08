@@ -1,9 +1,11 @@
+import './deploy-commands.js'; // register slash commands
 import { Client, GatewayIntentBits, Collection } from "discord.js";
+import fs from "fs"; // ✅ import fs once
 import path from "path";
 import checkSchedule from "./utils/scheduleChecker.js";
-import fs from 'fs';
 
-const config = JSON.parse(fs.readFileSync('./config.json', 'utf-8'));
+const config = JSON.parse(fs.readFileSync("./config.json", "utf-8"));
+
 
 
 const client = new Client({
