@@ -1,8 +1,7 @@
 import { REST, Routes } from 'discord.js';
 import fs from 'fs';
-import fs from 'fs';
+import config from './config.json' assert { type: 'json' }; // or use fs.readFileSync workaround
 
-const config = JSON.parse(fs.readFileSync('./config.json', 'utf-8'));
 
 
 const TOKEN = process.env.DISCORD_TOKEN;
