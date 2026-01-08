@@ -2,7 +2,7 @@ import fetch from "node-fetch";
 import fs from "fs";
 import { DateTime } from "luxon";
 import { EmbedBuilder } from "discord.js";
-import fs from 'fs';
+
 
 const config = JSON.parse(fs.readFileSync('./config.json', 'utf-8'));
 
