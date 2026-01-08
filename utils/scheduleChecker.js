@@ -2,7 +2,10 @@ import fetch from "node-fetch";
 import fs from "fs";
 import { DateTime } from "luxon";
 import { EmbedBuilder } from "discord.js";
-import config from "../config.json" assert { type: "json" };
+import fs from 'fs';
+
+const config = JSON.parse(fs.readFileSync('./config.json', 'utf-8'));
+
 
 export default async function checkSchedule(client) {
   const url = `https://sheets.googleapis.com/v4/spreadsheets/${config.sheetId}/values/Plan!H3:AO100?key=${config.googleApiKey}`;
