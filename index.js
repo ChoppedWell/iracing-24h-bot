@@ -2,7 +2,10 @@ import { Client, GatewayIntentBits, Collection } from "discord.js";
 import fs from "fs";
 import path from "path";
 import checkSchedule from "./utils/scheduleChecker.js";
-import config from "./config.json" assert { type: "json" };
+import fs from 'fs';
+
+const config = JSON.parse(fs.readFileSync('./config.json', 'utf-8'));
+
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages],
